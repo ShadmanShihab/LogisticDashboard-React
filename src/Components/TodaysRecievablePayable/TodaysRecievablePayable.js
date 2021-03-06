@@ -40,7 +40,7 @@ const TodaysRecievablePayable = () => {
     } else {
         return (
             <div className="TodaysReceivablePayable container">
-
+                <h3 style={{color: 'green'}}>Todays Order</h3>
                 <div className="row" style={{ margin: '0px' }, { padding: '0px' }}>
                     <div className="col-xl-3 col-md-6 md-4" style={{ margin: '0px' }}>
                         <div className="card shadow h-100 py=2">

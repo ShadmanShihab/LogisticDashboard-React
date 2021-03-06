@@ -1,38 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Open+Sans:wght@300;400;600;700&display=swap');
+
 .App {
+  /* text-align: center; */
+  margin: 0px;
+  padding: 0px;
+}
+
+*{
+  margin: 2px;
+  padding: 0;
+  
+  /* font-family: 'Lato', sans-serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.DashBoard{
+  background-color: rgb(216, 206, 206);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 0.5rem;
+}
+
+.TotalOrderHistory{
+  background-color: blue;
+}
+
+.TotalOrderStatus{
+  background-color: rgb(230, 44, 44);
+}
+
+.TodaysOrderStatus{
+  background-color: rgb(186, 247, 18);
+}
+
+
+
+
+
+
+
+
+
+/* TodaysReceivablePayable starts here*/
+
+.TodaysReceivablePayable{
+  margin: 0;
+  padding: 0;
+}
+
+
+.card{
+  border-radius: 10px !important;
+  background-color: rgba(223, 223, 224, 0.767) !important;
+  box-shadow: blue;
+  box-sizing: border-box;
+  font-weight: 600; 
+  text-align: center;
+  font-size: 10px;
+}
+
+
+.Payable-Title{
+  color: rgb(248, 112, 0);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.Payable-Body{
+  color: rgba(70, 65, 65, 0.911);
+}
+
+.Receivable-Title{
+  color: rgba(8, 168, 56, 0.973);
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.Receivable-Body{
+  color: rgba(70, 65, 65, 0.911);
+}
+
+
+.Payable-Card{
+  background-color:rgba(240, 125, 18, 0.185);
+  margin: 0;
+}
+
+.Receivable-Card{
+  background-color:rgba(83, 243, 9, 0.308);
+  margin: 0;
+}
+
+/*
+.lowerCol{
+  margin: 0;
+  padding: 0;
+  width: 100px;
+} */
+
+.Payable-Receivable-Piechart{
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (max-width: 470px) {
+  .DashBoard{
+    background-color: rgb(216, 206, 206);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+/* TodaysReceivablePayable ends here */
+
+

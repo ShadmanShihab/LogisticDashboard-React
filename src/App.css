@@ -7,7 +7,7 @@
 }
 
 *{
-  margin: 2px;
+  margin: 0px;
   padding: 0;
   
   /* font-family: 'Lato', sans-serif; */
@@ -15,23 +15,162 @@
 }
 
 .DashBoard{
-  background-color: rgb(216, 206, 206);
+  background-color: rgba(255, 250, 250, 0.932);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  grid-gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+  grid-gap: 0rem;
 }
 
-.TotalOrderHistory{
-  /* background-color: blue; */
-}
 
-.TotalOrderStatus{
-  /* background-color: rgb(230, 44, 44); */
-}
+
+
 
 .TodaysOrderStatus{
   /* background-color: rgb(186, 247, 18); */
 }
+
+
+
+
+
+/* Total Order History Starts here */
+.TotalOrderHistory{
+  margin-top: 0px ;
+  padding: 0px;
+  border-radius: 10px;
+}
+
+
+.TotalOrderCard{
+  font-size: 10px;
+  color: red;
+  background-color: rgba(184, 179, 179, 0.603);
+  margin-top: 0;
+}
+
+.totalJob{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.job-description{
+  margin-left: 20px;;
+}
+
+
+.totalJob-title{
+  color: rgba(6, 111, 197, 0.979);
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 20px
+}
+
+.totalJob-value{
+  color: rgba(0, 0, 0, 0.767);
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.totalJob-icon{
+  color: rgba(10, 5, 5, 0.678);
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+
+
+.completedJob{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+
+.completed-title{
+  color: rgba(253, 83, 5, 0.979);
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.completed-value{
+  color: rgba(0, 0, 0, 0.767);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.completed-icon{
+  color: rgba(10, 5, 5, 0.678);
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+
+
+
+.pendingJob{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 15px;
+  align-items: center;
+}
+
+
+.pending-title{
+  color: rgba(47, 180, 6, 0.979);
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.pending-value{
+  color: rgba(0, 0, 0, 0.767);
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.pending-icon{
+  color: rgba(10, 5, 5, 0.678);
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+
+
+
+
+
+
+.pieChart-container{
+  width: 200px;
+  height: 200px;
+  margin-top: 50px;
+  margin-left: 50px;
+  
+}
+
+
+/* Total order History Ends here */
+
+
+
+
 
 
 
@@ -119,10 +258,62 @@
 }
 
 
+@media (max-width: 280px) {
+  .DashBoard{
+    background-color: rgb(216, 206, 206);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 0.5rem;
+  }
+}
 
 
 
 
 /* TodaysReceivablePayable ends here */
 
+
+
+
+
+
+/* Chart css starts here */
+
+
+.pieChart{
+  width: 200px;
+  height: 200px;
+}
+
+@media(max-width: 500px){
+
+}
+
+
+/* Chart css ends here */
+
+
+
+
+
+
+
+
+
+/* Total Order Status starts here */
+.TotalOrderStatus{
+  margin-top: 0px ;
+  padding: 0px;
+  border-radius: 10px;
+  margin: 0px;
+}
+
+
+.total-receivable{
+  color: purple;
+  font-weight: 800;
+  font-size: 16px;
+  margin-top: 20px
+}
+/* Total Order Status ends here */
 

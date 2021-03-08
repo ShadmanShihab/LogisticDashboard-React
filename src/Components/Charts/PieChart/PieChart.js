@@ -30,8 +30,12 @@ function PieChart() {
   //     value: 45
   //   }, 
   //   {
-  //     index: 2,
+  //     index: 1,
   //     value: 50
+  //   }, 
+  //   {
+  //     index: 2,
+  //     value: 30
   //   }, 
   // ]
 
@@ -40,7 +44,7 @@ function PieChart() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:8087/todaysReceivablePayable/pieChart")
+    fetch("http://localhost:8087//totalOrderHistory/pieChart")
         .then(res => res.json())
         .then(
             (result) => {
@@ -58,13 +62,12 @@ function PieChart() {
 
   return (
     <div className="pieChart">
-      {/* <h1 style={{textAlign: 'center'}}>Pie Chart</h1> */}
         <AnimatedPieSVG
           data={data}
-          width={100}
-          height={100}
-          innerRadius={10}
-          outerRadius={50}
+          width={200}
+          height={200}
+          innerRadius={40}
+          outerRadius={100}
         />
     </div>
   );

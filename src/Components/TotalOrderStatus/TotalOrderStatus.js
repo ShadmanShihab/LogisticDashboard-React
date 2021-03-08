@@ -1,15 +1,66 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { BsFillBellFill, BsFillStopwatchFill, BsCheckAll } from "react-icons/bs";
 
 const TotalOrderStatus = () => {
-    return ( 
+
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch("http://localhost:8087/totalOrderStatus")
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setIsLoaded(true);
+                    setData(result);
+                },
+                (error) => {
+                    setIsLoaded(false);
+                    setError(error);
+                }
+            )
+    }, [])
+
+
+    return (
+
+// Some the classes used here are from Total Order History
+
         <div className="TotalOrderStatus">
-            <h1>Total Order Status</h1>
-            <p>
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Co
-            </p>
+            <div className="row TotalOrderHistory">
+                <div className="col-xl-6 col-md-6 md-4 TotalOrderCard" >
+
+
+                    <div className="totalJob" style={{ padding: '0px' }}>
+                        <div className="job-description">
+                            <h5 className="total-receivable">Total Receivable</h5>
+
+                            <h5 className="totalJob-value">{data.totalReceivable}</h5>
+                        </div>
+                        <div className="totalJob-icon total"> <BsFillBellFill /> </div>
+                    </div>
+
+                    <div className="completedJob" style={{ padding: '0px' }}>
+                    <div className="job-description">
+                        <h5 className="completed-title">Total Payable</h5>
+                        <p className="completed-value">{data.totalPayable}</p>
+                    </div>
+                    <div className="completed-icon"> <BsCheckAll /> </div>
+                </div>
+
+                <div className="pendingJob" style={{ padding: '0px' }}>
+                    <div className="job-description">
+                        <h5 className="pending-title"> Total Earned</h5>
+                        <p className="pending-value">{data.totalEarned}</p>
+                    </div>
+                    <div className="pending-icon"> <BsFillStopwatchFill /> </div>
+                </div> 
+                </div>
+
+            </div>
         </div>
-     );
+    );
 }
- 
+
 export default TotalOrderStatus;

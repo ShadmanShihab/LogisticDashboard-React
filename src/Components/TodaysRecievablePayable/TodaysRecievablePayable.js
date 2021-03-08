@@ -4,8 +4,8 @@ import {
     CardTitle, CardText, CardImg, CardImgOverlay
 } from 'reactstrap';
 import { Container, Row, Col } from 'reactstrap';
-import PieChart from '../Charts/PieChart';
 import { Button } from 'react-bootstrap';
+import BarChart from '../Charts/BarChart/BarChart';
 
 const TodaysRecievablePayable = () => {
 
@@ -129,7 +129,7 @@ const TodaysRecievablePayable = () => {
 
                     <div className="col-xl-4 col-md-6 md-4" style={{ margin: '0px' }}>
                         <div className="card shadow h-100 py=2">
-                            <PieChart />
+                            <BarChart />
                         </div>
                     </div>
                 </div>
